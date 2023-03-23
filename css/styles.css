@@ -691,6 +691,13 @@ a.pure-button-primary {
     .brick-house-fade {
         background-image: linear-gradient(90deg, #F9F8FA 0%,rgba(255,255,255, 0) 10%,rgba(255,255,255, 0) 90% #F9F8FA 100%);
       }
+
+      #brick-porch{
+
+        width: 50vw !important;
+        top:-20.5vw!important;
+
+      }
     
 }
 /* mobile bricks */
@@ -760,6 +767,13 @@ a.pure-button-primary {
   }
   
 
+  #brick-porch{
+    position:relative;
+    top:-36vw;
+    width: 87vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
 
