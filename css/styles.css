@@ -706,8 +706,28 @@ a.pure-button-primary {
         font-weight: 300;
         font-size: 1em!important;
         letter-spacing:normal !important;
-    
       }
+      /* .brick-house {
+        grid-template-rows: repeat(7, 1fr);;
+        grid-template-columns: repeat(8, 1fr);
+      
+      } */
+      /* .block:nth-child(5n-5){
+        grid-column-end: span 1;
+      }
+      .block:nth-child(5n){
+        grid-column-end: span 1;
+      } */
+    
+}
+.block:nth-child(11n-5){
+    grid-column-end: span 1;
+  }
+  .block:nth-child(11n){
+    grid-column-end: span 1;
+  }
+@media(min-width:48em){
+   
     
 }
 
@@ -751,12 +771,6 @@ a.pure-button-primary {
   }
 
   
-  .block:nth-child(11n-5){
-    grid-column-end: span 1;
-  }
-  .block:nth-child(11n){
-    grid-column-end: span 1;
-  }
 
   
   .bottom-block {
