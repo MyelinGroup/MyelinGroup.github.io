@@ -680,12 +680,36 @@ a.pure-button-primary {
     position: relative;
 }
 
+@media(min-width:90em){
+	.brick-house-outer{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: relative;
+    }
+    .brick-house-fade {
+        background-image: linear-gradient(90deg, #F9F8FA 0%,rgba(255,255,255, 0) 10%,rgba(255,255,255, 0) 90% #F9F8FA 100%);
+      }
+    
+}
+/* mobile bricks */
+@media(max-width:48em){
+    .block span{
+        font-weight: 300;
+        font-size: 1em!important;
+        letter-spacing:normal !important;
+    
+      }
+    
+}
+
 .brick-house-fade {
     position: absolute;
     z-index: 1;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255, 0) 10%,rgba(255,255,255, 0) 90% ,rgba(255,255,255, 1) 100%);
+    background-image: linear-gradient(90deg, #F9F8FA 0%,#F9F8FA 5%,rgba(255,255,255, 0) 20%,rgba(255,255,255, 0) 80% ,#F9F8FA 95%,#F9F8FA 100%);
     width: 100%;
     height: 100%;
   }
@@ -693,18 +717,20 @@ a.pure-button-primary {
   .block {
     height: 95%;
     width: 98%;
-    border: 1px solid black;
-    transition: opacity 0.2s ease-out;
+    border: 1.5px solid black;
+    transition: all 0.2s ease-out;
     grid-column-end: span 2;
     text-align: center;
     display: table;
+    pointer-events: all !important;
 
   }
   
   .block:hover {
-    transition: opacity 0.2s ease-in;
-    opacity: 1;
-    
+    transition: all 0.2s ease-in;
+    border: 2.5px solid black;
+    border-radius: 1em;
+
   }
 
   .block span{
