@@ -20,23 +20,27 @@ html {
 }
 
 #scroll-wrapper {
-  display: table;
   width:100%;
-  height:100%;
-	padding-top: 42%;
+  height:100vh;
+  position: absolute;
+  top:0;
+  right:0;
+  display:table;
+
 }
 
 #scroll-wrapper-inner {
-  display: table-cell;
-  vertical-align:middle;
-  width:100%;
-  height:100%;
+  width:100px !important;
+  height:20px   !important;
+  display:table-cell;
+  vertical-align:bottom;
+  padding-bottom: 120px;
+
 }
 
 #scroll-down {
     display: block;
     position: relative;
-    padding-top: 79px;
   text-align:center;
 }
 
@@ -51,7 +55,9 @@ html {
    text-align:center;
    transform: rotate(90deg);
   margin-bottom: 45px;
+  width: 100%;
 }
+
 #scroll-down::before {
     -webkit-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
     /* Safari 4+ */
@@ -477,22 +483,17 @@ a.pure-button-primary {
 	padding-left: 10%;
 	text-align: center;
 	font-size: 1.1em;
+}
+
+.textbackdrop{
     background-color: #a0a0a010;
+    color:rgb(33, 33, 33);
 }
 
 .splash-screen{
     margin-top: 5em;
     padding: 2em;
     height: 110vh;
-}
-
-.brainstem-cut{
-    display: inline;
-    padding: 0;
-    margin: 0;
-    overflow: hidden !important;
-    height: 50vh;
-    
 }
 .left-fill{
     position: absolute;
@@ -514,14 +515,13 @@ a.pure-button-primary {
     position: absolute;
     width: 50%;
     right:0;
-    height: 100%;
+    height: 800vh;
     z-index: -1;
     overflow: hidden;
-    height: 250vh;
-    opacity: 20%;
 }
 
 .Splash-Brain{
+    position: absolute;
     margin-top: 15%;
     width: 75%;
     display: block;
@@ -553,6 +553,26 @@ a.pure-button-primary {
     margin: 0 auto !important;
     
 }
+.Splash-Brain-Gradiant-Mask{
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%,rgba(255, 255, 255, .2) 70vh, rgba(255, 255, 255, 1) 80vh);
+    position: absolute;
+    mix-blend-mode: saturation;
+    right:0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.Splash-Brain-Gradiant-Mask-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%,rgba(255, 255, 255, .2) 90vh, rgba(255, 255, 255, .8) 140vh);
+    position: absolute;
+    right:0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
 .splash-head {
     top:-8em !important;
     font-size: 20px;
@@ -636,6 +656,89 @@ a.pure-button-primary {
         margin-right: 7px;
     }
 
+
+
+
+/* HACKER HOUSE STYLE  */
+
+
+
+.brick-house {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);;
+    grid-template-columns: repeat(10, 1fr);
+  
+  }
+
+.brick-house-outer{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+
+.brick-house-fade {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to left, rgba(255,255,255,1) 0%,rgba(255,255,255, 0) 10%,rgba(255,255,255, 0) 90% ,rgba(255,255,255, 1) 100%);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .block {
+    height: 95%;
+    width: 98%;
+    border: 1px solid black;
+    transition: opacity 0.2s ease-out;
+    grid-column-end: span 2;
+    text-align: center;
+    display: table;
+
+  }
+  
+  .block:hover {
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+    
+  }
+
+  .block span{
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #000;
+    letter-spacing: .25rem;
+
+  }
+
+  
+  .block:nth-child(11n-5){
+    grid-column-end: span 1;
+  }
+  .block:nth-child(11n){
+    grid-column-end: span 1;
+  }
+
+  
+  .bottom-block {
+    grid-area: big-bottom;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+  
+
+
+
+
+
+
 /* This is the class used for the dark-background areas. */
 .ribbon {
     background: #2d3e50;
@@ -715,3 +818,4 @@ body {
         font-size: 300%;
     }
 }
+
