@@ -538,6 +538,25 @@ a.pure-button-primary {
 	
 }
 /* mobile devices */
+
+@media (max-width: 700px) { 
+	
+    .Splash-Brain{
+        width: 95%;
+    }
+    .right-fill{
+        height: 150vh;
+    }
+    .extended_underline{
+        border-bottom-style: solid;
+        border-bottom-color: #848484 !important;
+        border-bottom-width: 1px;
+        padding-bottom: .1em;
+        margin-left: 5%!important;
+        margin-right: 5%!important;
+    }
+
+}
 @media (max-width: 1400px) { 
 	
     .Splash-Brain{
