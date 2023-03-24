@@ -710,16 +710,20 @@ a.pure-button-primary {
 
 
       .brick-house {
-        grid-template-rows: repeat(7, 1fr);;
-        grid-template-columns: repeat(8, 1fr);
+
+        grid-template-rows: repeat(9, 1fr);;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
       
       }
       .block:nth-child(9n-9){
         grid-column-end: span 1;
+        background-color: black;
       }
       .block:nth-child(9n+5){
         grid-column-end: span 1;
+        background-color: orange;
       }
+
     
 }
 
@@ -730,7 +734,13 @@ a.pure-button-primary {
     .block:nth-child(11n){
     grid-column-end: span 1;
     }
-    
+
+    .block:nth-child(39){
+        display: none;
+    }
+    .block:nth-child(40){
+        display: none;
+    }
 }
 
 .brick-house-fade {
