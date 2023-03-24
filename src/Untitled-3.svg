@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699.49 659">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="266.95" y="81.19" width="207.63" height="337.29"/>
+  <polyline class="cls-3" points="266.95 81.19 349.15 106.62 349.15 462.55 266.95 418.48"/>
+  <ellipse class="cls-1" cx="3.81" cy="488.82" rx="3.81" ry="11.86"/>
+  <ellipse class="cls-2" cx="329.24" cy="273.99" rx="5.51" ry="14.83"/>
+</svg>
