@@ -831,7 +831,56 @@ a.pure-button-primary {
   }
 
 
+#Team-Bios{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+}
 
+#Team-Bios .contented{
+    border: 0px solid black;
+    transition: all 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Team-Bios .headShot{
+
+    grid-column-end: span 1;
+    height: 20vh;
+}
+#Team-Bios span{
+    grid-column-end: span 3;
+    height: 100%;
+}
+
+#Team-Bios h{
+    font-size: x-large;
+    display: block;
+    color: #000;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#Team-Bios a{
+    font-size: medium;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+#Team-Bios .left{
+    align-items:flex-start;
+    text-align: left;
+    border-width: 0px 0px 0px 1px;
+}
+#Team-Bios .right{
+    border-width: 0px 1px 0px 0px;
+    text-align: right;
+    align-items:flex-end;
+}
 
 
 /* This is the class used for the dark-background areas. */
