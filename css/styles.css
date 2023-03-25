@@ -828,14 +828,28 @@ a.pure-button-primary {
     width: 87vw;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -36vw;
   }
 
 
 #Team-Bios{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    padding-top: 15px;
+    
 }
+
+@media(min-width:50em){
+    #Team-Bios{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+
 
 #Team-Bios .contented{
     border: 0px solid black;
@@ -871,6 +885,17 @@ a.pure-button-primary {
 
 }
 
+@media(max-width:40em){
+    #Team-Bios .headShot{
+
+        grid-column-end: span 2;
+    }
+    #Team-Bios span{
+        grid-column-end: span 2;
+    }
+    
+}
+
 #Team-Bios .left{
     align-items:flex-start;
     text-align: left;
@@ -883,6 +908,42 @@ a.pure-button-primary {
 }
 
 
+
+#Contact .textbackdrop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Contact .message-box{
+    padding: 1em;
+    vertical-align: top;
+    margin: 2em;
+    margin-bottom: .6em;
+    width: 60%;
+    height: 30vw;
+    border-radius: 1em;
+    resize: none;
+}
+
+#Contact .email-box{
+    border-width: 1px;
+    width: 20vw;
+    padding: .5em;
+    height: 5vw;
+    border-radius: .3em;
+}
+
+#Contact button{
+    border-width: 1px;
+
+    width: 7vw;
+    height: 3vw;
+    border-radius: .3em;
+    margin: .2em;
+    margin-top: .4em;
+}
 /* This is the class used for the dark-background areas. */
 .ribbon {
     background: #2d3e50;
