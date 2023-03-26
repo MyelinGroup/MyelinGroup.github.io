@@ -471,8 +471,7 @@ a.pure-button-primary {
 	flex-direction: column;
 	font-size: 1.5em;
 	padding: 50px;
-    width: 12em;
-    height: 300px;
+    width: 14em;
 	
 }
 .FundingText{
@@ -490,6 +489,7 @@ a.pure-button-primary {
 	border-width:1px;
 	padding: 10px;
 	border-color:black;
+    right:0;
 }
 .culled_text{
 	padding-right: 10%;

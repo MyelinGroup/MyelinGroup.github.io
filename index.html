@@ -8,6 +8,42 @@
     <link rel="stylesheet" href="css/pure.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	(function(){
+		emailjs.init("f9O3zrocUlDiL7hwS");
+
+
+		<form class="textbackdrop">
+				<textarea class="message-box" type="text" name="Message" placeholder="Message"></textarea>
+				<input class="email-box" type="email" placeholder="Email"></input>
+				<div class="btns"><button type="submit">Send</button><button type="reset">Clear</button></div>
+			</form>
+
+
+		onclick(".contact-form", function(event) {
+			console.log(event.message);
+			// generate the contact number value
+			var templateParams = {
+			to_name: 'James',
+			message: 'Check this out!'
+			};
+			emailjs.send('service_r6yjrvi', 'template_waa90n', templateParams)
+				.then(function(response) {
+				console.log('SUCCESS!', response.status, response.text);
+				}, function(error) {
+				console.log('FAILED...', error);
+				});
+		});
+		
+
+			
+
+
+	})();
+	</script>
 	<script src="css/main.js"></script>
 </head>
 <body>
