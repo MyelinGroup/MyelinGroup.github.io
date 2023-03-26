@@ -392,11 +392,11 @@ a.pure-button-primary {
     overflow: none;
     display:inline-block;
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-width: 600px) {
     .Heading-Logo{
         margin-top: -1em;
 	    margin-bottom: -2em;
-        height: 70px;
+        height: 80px;
     }
 }
     
@@ -471,6 +471,8 @@ a.pure-button-primary {
 	flex-direction: column;
 	font-size: 1.5em;
 	padding: 50px;
+    width: 12em;
+    height: 300px;
 	
 }
 .FundingText{
@@ -479,10 +481,11 @@ a.pure-button-primary {
 	position: absolute;
 	color: #3C3C3C;
 	font-weight: 500;
+    font-size: 100%;
 }
 
 .Sponsor{
-	width: 180px;
+	width: 80%;
 	border-style: solid;
 	border-width:1px;
 	padding: 10px;
@@ -733,8 +736,17 @@ a.pure-button-primary {
     position: relative;
 }
 
+#brick-porch{
+    position:relative;
+    top:-36vw !important;
+    width: 87vw  !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -36vw;
+  }
+
 @media(min-width:90em){
-	/* .brick-house-outer{
+	.brick-house-outer{
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -747,8 +759,9 @@ a.pure-button-primary {
 
         width: 50vw !important;
         top:-20.5vw!important;
+        margin-bottom: -20.5vw;
 
-      } */
+      }
     
 }
 /* mobile bricks */
@@ -774,6 +787,9 @@ a.pure-button-primary {
         grid-column-end: span 1;
         /* background-color: orange; */
       }
+      .desktop{
+        display: none;
+      }
 
     
 }
@@ -790,6 +806,9 @@ a.pure-button-primary {
         display: none;
     }
     .block:nth-child(40){
+        display: none;
+    }
+    .mobile{
         display: none;
     }
 }
@@ -852,14 +871,7 @@ a.pure-button-primary {
   }
   
 
-  #brick-porch{
-    position:relative;
-    top:-36vw !important;
-    width: 87vw  !important;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -36vw;
-  }
+ 
 
 
 #Team-Bios{
