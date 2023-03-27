@@ -11,39 +11,8 @@
 	<script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 	</script>
-	<script type="text/javascript">
-	(function(){
-		emailjs.init("f9O3zrocUlDiL7hwS");
+	<script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
 
-
-		<form class="textbackdrop">
-				<textarea class="message-box" type="text" name="Message" placeholder="Message"></textarea>
-				<input class="email-box" type="email" placeholder="Email"></input>
-				<div class="btns"><button type="submit">Send</button><button type="reset">Clear</button></div>
-			</form>
-
-
-		onclick(".contact-form", function(event) {
-			console.log(event.message);
-			// generate the contact number value
-			var templateParams = {
-			to_name: 'James',
-			message: 'Check this out!'
-			};
-			emailjs.send('service_r6yjrvi', 'template_waa90n', templateParams)
-				.then(function(response) {
-				console.log('SUCCESS!', response.status, response.text);
-				}, function(error) {
-				console.log('FAILED...', error);
-				});
-		});
-		
-
-			
-
-
-	})();
-	</script>
 	<script src="css/main.js"></script>
 </head>
 <body>
@@ -72,6 +41,7 @@
 <div class="content-wrapper">
 	<div class = "brainstem-cut">
 	<div class="content splash-screen">
+		<div class="desktop">
 		<div class = "left-fill">
 		<div class = "splash-wrap">
 			<h class="splash-head">Innovating the Future<br>of Neuro-Tech</h>
@@ -87,8 +57,23 @@
 			<div class = "Splash-Brain-Gradiant-Mask"></div>
 			<div class = "Splash-Brain-Gradiant-Mask-2"></div>
 		</div>
+		</div>
 		
-		<div id="scroll-wrapper">
+		<div class="mobile">
+			<div class = "splash-wrap">
+			<h class="splash-head mobile">Innovating the Future<br>of Neuro-Tech</h>
+		</div>
+			<div class="Sponsor_wrapper">
+			<a class="FundingText">Supported By</a>
+			<img class="Sponsor" src="src/1517.svg" alt="Brain">
+			</div>
+			<img class="Splash-Brain" src="src/BrainAndStem.svg" alt="Brain">
+
+		</div>
+		
+	</div>
+		
+	<div id="scroll-wrapper">
 	  <div id="scroll-wrapper-inner">
 	  <div id="scroll-title">
 		Scroll
@@ -99,7 +84,7 @@
 	  </div>
 	</div>
     
-		<div class="content" id = "Misson">
+	<div class="content" id = "Misson">
         <h2 class="content-head is-center extended_underline">Our misson</h2>
 
         <div class="pure-g">
@@ -119,17 +104,17 @@ The Myelin Team
 
 
         </div>
-    </div>	
+    	</div>	
 	<div class="content" id = "Team">
 		<h2 class="content-head is-center extended_underline">Team</h2>
 		  <div class="textbackdrop">
 		  <div id="Team-Bios" >
 			  <img class = "headShot contented" alt="FACE">
-			  <span class="contented left"><h>Zan</h><a>Founder</a></span>
-			  <span class="contented right"><h>Micheal</h><a>Detail Text</a></span>
+			  <span class="contented left"><h>Zan</h><a>CoFounder</a></span>
+			  <span class="contented right"><h>Micheal</h><a>CoFounder</a></span>
 			  <img class = "headShot contented" alt="FACE">
 			  <img class = "headShot contented" alt="FACE">
-			  <span class="contented left"><h>Mustifa</h><a>Detail Text</a></span>
+			  <span class="contented left"><h>Mustifa</h><a>CoFounder</a></span>
 			  <span class="contented right"><h>Gabriel</h><a>Web Master</a></span>
 			  <img class = "headShot contented" alt="FACE">
 			  <img class = "headShot contented" alt="FACE">
@@ -139,7 +124,7 @@ The Myelin Team
 			  
 		  </div>
 		  </div>
-		  </div>
+		</div>
 	<div class="content" id = "Hackerhouse">
       <h2 class="content-head is-center extended_underline">Hackerhouse</h2>
 
@@ -261,44 +246,73 @@ The Myelin Team
 
 	
 	
-	</div>
+</div>
 
+<h2 class="content-head is-center extended_underline">Contact</h2>
+<div class="content" id = "Contact">
+	<h2 class="content-head is-center extended_underline">Contact</h2>
+		<!-- input field for message and email with submit and clear buttons -->
+		<form class="textbackdrop contact-form">
+			<textarea class="message-box sending" type="text" name="Message" placeholder="Message" required="true"></textarea>
+			<input class="email-box" name = "email" type="email" placeholder="Email" required="true"></input>
+			<div class="btns"><button type="submit">Send</button><button type="reset">Clear</button></div>
+		</form>
+
+</div>
 	
-	<div class="content" id = "Contact">
-		<h2 class="content-head is-center extended_underline">Contact</h2>
-			<!-- input field for message and email with submit and clear buttons -->
-			<form class="textbackdrop">
-				<textarea class="message-box" type="text" name="Message" placeholder="Message"></textarea>
-				<input class="email-box" type="email" placeholder="Email"></input>
-				<div class="btns"><button type="submit">Send</button><button type="reset">Clear</button></div>
-			</form>
+<div class="content">
 
+	<div class="pure-g">
 
-    <div class="content">
+		<div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+			<h4>Bottom Card</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+			</p>
 
-        <div class="pure-g">
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Bottom Card</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                </p>
-
-                <h4>More Information</h4>
-                <p>
-                    Website Design Assisted By GPT-4
-                </p>
-            </div>
-        </div>
-
-    </div>
-
- 
+			<h4>More Information</h4>
+			<p>
+				Website Design Assisted By GPT-4
+			</p>
+		</div>
+	</div>
 
 </div>
 
+ 
+
+
 </body>
+
+
+<script type="text/javascript">
+	emailjs.init("f9O3zrocUlDiL7hwS");
+	//select contact form class and add eventlistener
+	document.querySelector(".contact-form").addEventListener("submit", function(e) {
+		event.preventDefault();
+		// generate the contact number value
+		var formData = new FormData(e.target);
+		var templateParams = {
+		to_name: formData.get("email"),
+		message: formData.get("Message")
+		};
+
+		
+		console.log(templateParams);
+		//add class to object
+		document.querySelector(".contact-form .message-box").classList.add("sending");
+		document.querySelector(".contact-form .email-box").classList.add("disabled");
+
+		// emailjs.send('service_r6yjrvi', 'template_waa90n', templateParams)
+		// 	.then(function(response) {
+		// 	console.log('SUCCESS!', response.status, response.text);
+		// 	}, function(error) {
+		// 	console.log('FAILED...', error);
+		// 	});
+	});
+</script>
+
 </html>

@@ -788,10 +788,9 @@ a.pure-button-primary {
         /* background-color: orange; */
       }
       .desktop{
-        display: none;
+        display: none!important;
       }
 
-    
 }
 
 @media(min-width:48em){
@@ -809,7 +808,7 @@ a.pure-button-primary {
         display: none;
     }
     .mobile{
-        display: none;
+        display: none!important;
     }
 }
 
@@ -891,8 +890,6 @@ a.pure-button-primary {
     
 }
 
-
-
 #Team-Bios .contented{
     border: 0px solid black;
     transition: all 0.2s ease-out;
@@ -967,6 +964,8 @@ a.pure-button-primary {
     height: 30vw;
     border-radius: 1em;
     resize: none;
+    /* background-color: #000; */
+
 }
 
 #Contact .email-box{
@@ -984,6 +983,17 @@ a.pure-button-primary {
     border-radius: .3em;
     margin: .2em;
     margin-top: .4em;
+    transition: all 0.2s ease-out;
+}
+
+#Contact button:hover{
+    pointer-events: all;
+    cursor: pointer;
+    background-color: #efefef;
+}
+
+.sending{
+    opacity: .9;
 }
 
 @media(max-width:50em){
