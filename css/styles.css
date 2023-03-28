@@ -1103,6 +1103,12 @@ a.pure-button-primary {
     margin-left: 10px;
 }
 
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration:none;
+}
+
 @media screen and (max-width: 500px) {
     #contact-grid{
     
@@ -1114,7 +1120,6 @@ a.pure-button-primary {
     }
     #contact-grid span{
         padding: 5px;
-    
         display: flex;
         align-items: center;
         width: 100%;
@@ -1123,7 +1128,7 @@ a.pure-button-primary {
     }
 
     #contact-grid a{
-        margin-left: 30px;
+        margin-left: 40px;
     }
     #contact-grid i{
         font-size: x-large;
