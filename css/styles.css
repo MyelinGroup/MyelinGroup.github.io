@@ -1099,7 +1099,7 @@ a.pure-button-primary {
     margin-left: 60px;
 }
 #contact-grid i{
-    font-size: x-large;
+    font-size: xx-large;
     margin-left: 10px;
 }
 
@@ -1129,10 +1129,6 @@ a:-webkit-any-link {
 
     #contact-grid a{
         margin-left: 40px;
-    }
-    #contact-grid i{
-        font-size: x-large;
-        margin-left: 10px;
     }
 }
 
