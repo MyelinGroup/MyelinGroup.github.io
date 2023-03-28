@@ -1111,9 +1111,15 @@ a.pure-button-primary {
 
 .btn{
     padding: 10px 20px;
+    border: 1px;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+    background-color: #c8c8c8aa;
 }
 .btn:hover{
+    background-color: #c8c8c8ff;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 a:-webkit-any-link {
