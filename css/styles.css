@@ -1041,9 +1041,11 @@ a.pure-button-primary {
 }
 #contact-grid span:nth-child(2n-1){
     border-right: 1px solid black;
-    border-bottom: 1px solid black;
 }
-#contact-grid span:nth-child(n+2){
+#contact-grid span:nth-child(3){
+    border-bottom: 0px;
+}
+#contact-grid span:nth-child(4){
     border-bottom: 0px;
 }
 
