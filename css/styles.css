@@ -902,7 +902,9 @@ a.pure-button-primary {
 #Team-Bios .headShot{
 
     grid-column-end: span 1;
-    height: 20vh;
+    height: 30vh;
+    align-self: center;
+    margin: auto;
 }
 #Team-Bios span{
     grid-column-end: span 3;
