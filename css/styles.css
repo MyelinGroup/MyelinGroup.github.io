@@ -1029,13 +1029,17 @@ a.pure-button-primary {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 200px;
+    width: 400px;
+    height: 100px;
     margin: 0 auto;
 
 }
 #contact-grid span{
     border-bottom: 1px solid black;
-    padding: 5px;
+    padding: 3px;
+    display: grid;
+    align-items: center;
+ 
     width: 100%;
     height: 100%;
 }
