@@ -1102,6 +1102,19 @@ a.pure-button-primary {
     font-size: xx-large;
     margin-left: 10px;
 }
+#Contact{
+    padding-bottom: 0;
+}
+#Additional{
+    padding-bottom: 0;
+}
+
+.btn{
+    padding: 10px 20px;
+}
+.btn:hover{
+    cursor: pointer;
+}
 
 a:-webkit-any-link {
     color: -webkit-link;
