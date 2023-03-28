@@ -664,6 +664,61 @@ a.pure-button-primary {
     text-transform: uppercase;
 }
 
+
+.mobile-brain{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.mobile .splash-head{
+    text-align: center;
+    display: block;
+    padding-top: 50px;
+}
+.mobile .splash-subhead{
+    text-align: center;
+ 
+    color: #111;
+}
+
+@media(max-height:70em){
+    .mobile .splash-head{
+        padding-top: 15px;
+        font-size: 200%!important;
+    }
+
+#scroll-wrapper-inner {
+    width:40px !important;
+    height:10px   !important;
+    display:table-cell;
+    vertical-align:bottom;
+    padding-bottom: 70px;
+  
+  }
+  
+
+  #scroll-down::before {
+    height: 50px;
+
+}
+  
+  #scroll-title {
+      display: block;
+      text-transform: uppercase;
+      color: black;
+    font-family: "raleway";
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:0.4em;
+     text-align:center;
+     transform: rotate(90deg);
+    margin-bottom: 45px;
+    width: 100%;
+  }
+}
+
 /* This is the main heading that appears on the blue section */
 
 
@@ -746,23 +801,6 @@ a.pure-button-primary {
     margin-bottom: -36vw;
   }
 
-.mobile-brain{
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-}
-
-.mobile .splash-head{
-    text-align: center;
-    display: block;
-    padding-top: 50px;
-}
-.mobile .splash-subhead{
-    text-align: center;
- 
-    color: #111;
-}
 
 @media(min-width:90em){
 	.brick-house-outer{
