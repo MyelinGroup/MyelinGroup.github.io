@@ -1026,20 +1026,21 @@ a.pure-button-primary {
 }
 
 #contact-grid{
-
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 400px;
-    height: 100px;
-    margin: 0 auto;
+    width: 500px;
+    height: 140px;
+    margin: 20px auto;
+    margin-top: 30px;
 
 }
 #contact-grid span{
     border-bottom: 1px solid black;
-    padding: 3px;
+    padding: 5px;
     display: grid;
     align-items: center;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 30% 1fr;
  
     width: 100%;
     height: 100%;
@@ -1052,6 +1053,11 @@ a.pure-button-primary {
 }
 #contact-grid span:nth-child(4){
     border-bottom: 0px;
+}
+
+#contact-grid i{
+    font-size: x-large;
+    margin-left: 10px;
 }
 
 /* This is the class used for the dark-background areas. */
