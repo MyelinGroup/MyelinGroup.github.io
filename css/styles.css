@@ -802,7 +802,7 @@ a.pure-button-primary {
   }
 
 
-@media(min-width:90em){
+@media(min-width:70em){
 	.brick-house-outer{
         width: 80%;
         margin-left: auto;
@@ -824,9 +824,9 @@ a.pure-button-primary {
 /* mobile bricks */
 @media(max-width:48em){
     .block span{
-        font-weight: 300;
-        font-size: 1em!important;
-        letter-spacing:normal !important;
+        font-weight:bolder!important;
+        font-size: 75%!important;
+        letter-spacing:0 !important;
       }
 
 
