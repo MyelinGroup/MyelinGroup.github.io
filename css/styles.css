@@ -824,7 +824,7 @@ a.pure-button-primary {
 /* mobile bricks */
 @media(max-width:48em){
     .block span{
-        font-weight:500!important;
+        font-weight:450!important;
         font-size: 75%!important;
         letter-spacing:0 !important;
       }
