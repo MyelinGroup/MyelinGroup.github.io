@@ -804,6 +804,14 @@ a.pure-button-primary {
   }
 
 
+.left-just-hh{
+    text-align: justify;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 @media(min-width:70em){
 	.brick-house-outer{
         width: 80%;
@@ -825,6 +833,15 @@ a.pure-button-primary {
 }
 /* mobile bricks */
 @media(max-width:48em){
+
+    .left-just-hh{
+        text-align: justify;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+
     .block span{
         font-weight:450!important;
         font-size: 75%!important;
