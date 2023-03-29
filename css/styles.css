@@ -546,6 +546,8 @@ a.pure-button-primary {
 }
 .content-wrapper{
     overflow: hidden;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .right-fill{
@@ -1134,6 +1136,7 @@ a.pure-button-primary {
 #Additional p{
     margin: auto, auto;
     display: block;
+    margin: 0;
 }
 
 .btn{
