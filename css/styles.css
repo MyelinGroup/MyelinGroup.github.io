@@ -936,8 +936,8 @@ a.pure-button-primary {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, minmax(0,1fr));
-    padding-top: 20px;
-    padding-bottom: 20px;    
+    padding-top: 40px;
+    padding-bottom: 40px;    
 }
 
 @media(min-width:50em){
