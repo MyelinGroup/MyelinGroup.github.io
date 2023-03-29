@@ -962,6 +962,7 @@ a.pure-button-primary {
     height: 30vh;
     align-self: center;
     margin: auto;
+    border-radius: 7px;
 }
 #Team-Bios span{
     grid-column-end: span 3;
