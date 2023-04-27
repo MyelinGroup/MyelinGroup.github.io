@@ -10,10 +10,18 @@ window2 = $(window)
 let scroll = document.getElementById("scroll-wrapper");
 let s = document.getElementById("lazyDrift");
 
-console.log(scroll)
+let oldPos =  window2.scrollTop();
+let target = window2.scrollTop();
 
 function parallax() {
   var yPos = window2.scrollTop();
+  if(yPos-oldPos > 5){
+    yPos = oldPos + 5;
+    
+  }else if(yPos-oldPos < -5){
+    yPos = oldPos - 5;
+  }
+  oldPos = yPos;
   s.style.top = 0 - yPos/scrollScale + "%"; 
   
   var range = [100,VH*.8];
@@ -37,6 +45,10 @@ function parallax() {
 
 }
 
+
+
 window.addEventListener("scroll", function(){
-    parallax(); 
+    target = window2.scrollTop();
+    var refreshIntervalId = setInterval(parallax, 5);
+    
 });
