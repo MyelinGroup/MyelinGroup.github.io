@@ -548,10 +548,13 @@ a.pure-button-primary {
         margin-right: auto;
         border-radius: 20px;
         background-color: rgba(178, 178, 178, 0.15);  
+        -webkit-backdrop-filter: blur(1px);
+        box-shadow: 0px 4px 8px 4px rgb(0 0 0 / 10%);
         backdrop-filter: blur(3px);
         z-index: 90;
         width: 95%;
     }
+
 
     
     .Sponsor_wrapper .inner_wrap{
@@ -625,6 +628,7 @@ a.pure-button-primary {
     background-color: #a0a0a015;
     color:rgb(33, 33, 33);
     border-radius: 20px;
+    box-shadow: 0px 5px 7px 5px rgb(0 0 0 / 10%);
 }
 
 .splash-screen{
