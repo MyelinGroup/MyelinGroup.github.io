@@ -489,7 +489,7 @@ a.pure-button-primary {
 }
 .FundingText{
 	top: 0;
-	left:0;
+	left: 0;
 	position: absolute;
 	color: #3C3C3C;
 	font-weight: 300;
@@ -527,6 +527,76 @@ a.pure-button-primary {
 	text-align: center;
 	font-size: 1.2em;
     font-weight: 350;
+}
+
+/*Mobile Only Variant*/
+@media(max-width:48em){
+    .Sponsor_wrapper{
+        position: absolute;
+        text-align: center;
+        padding: 8px;
+        left: initial;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
+        font-size: 1.5em;
+        top:100vh;
+        padding-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        background-color: rgba(178, 178, 178, 0.15);  
+        backdrop-filter: blur(3px);
+        z-index: 90;
+    }
+
+    
+    .Sponsor_wrapper .inner_wrap{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 1fr;
+        width: 100%;
+        gap: 1px;
+    
+    }
+    .FundingText{
+        left: inherit;
+        align-self: center;
+        color: #3C3C3C;
+        font-weight: 300;
+        font-size: 50%;
+    }
+    
+    .Sponsor{
+
+        width: 95%;
+        padding: 5px;
+        align-self: center;
+    
+    }
+    
+    .Sponsor.Fifteenseventeen{
+        border-color:black;
+        border-width:.5px;
+        border-style: solid;
+        align-self: center;
+    }
+    
+    .Sponsor.George{
+        width: 100%;
+        align-self: center;
+    }
+    .Sponsor.Menta{
+        grid-column-end: span 2;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 5px;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
