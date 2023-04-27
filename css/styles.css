@@ -516,9 +516,9 @@ a.pure-button-primary {
 }
 .Sponsor.Menta{
     grid-column-end: span 2;
-
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 5px;
 }
 .culled_text{
