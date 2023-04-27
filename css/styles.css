@@ -665,6 +665,8 @@ a.pure-button-primary {
 .content-wrapper{
     padding-bottom: 0;
     margin-bottom: 0;
+    scroll-behavior: smooth;
+
 }
 
 .right-fill{
@@ -819,7 +821,7 @@ a.pure-button-primary {
     z-index: 2;
 }
 .first-content{
-    margin-top: 120vh;
+    margin-top: 115vh;
 }
 
 
