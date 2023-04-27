@@ -6,16 +6,16 @@ var scrollScale = 40;
 if(mobile) scrollScale = 20;
 
 
+window2 = $(window)
+let scroll = document.getElementById("scroll-wrapper");
+let s = document.getElementById("lazyDrift");
 
+console.log(scroll)
 
 function parallax() {
-   
-    var s = document.getElementById("lazyDrift");
-    var scroll = document.getElementById("scroll-wrapper");
-  var yPos = $(window).scrollTop();
+  var yPos = window2.scrollTop();
   s.style.top = 0 - yPos/scrollScale + "%"; 
   
-
   var range = [100,VH*.8];
   if(yPos<range[0]){
     scroll.style.opacity = 1;
