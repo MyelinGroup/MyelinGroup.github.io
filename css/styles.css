@@ -564,11 +564,11 @@ a.pure-button-primary {
     
     }
     .FundingText{
-        left: inherit;
+        left: initial;
         align-self: center;
         color: #3C3C3C;
-        font-weight: 300;
-        font-size: 50%;
+        font-weight: 400;
+        font-size: 65%;
     }
     
     .Sponsor{
