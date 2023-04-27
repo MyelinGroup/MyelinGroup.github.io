@@ -286,6 +286,7 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
+    overflow: hidden;
 }
 
 h1,
@@ -662,7 +663,6 @@ a.pure-button-primary {
 
 }
 .content-wrapper{
-    overflow: hidden;
     padding-bottom: 0;
     margin-bottom: 0;
 }
@@ -813,13 +813,15 @@ a.pure-button-primary {
 }
 
 .brainstem-cut{
-    position: fixed;
+    position: absolute;
+    top: 0;
     width: 100%;
-    z-index: -1;
+    z-index: 2;
 }
 .first-content{
-    margin-top: 120vh;
+    margin-top: 130vh;
 }
+
 
 
 @media(max-height:70em){
@@ -876,7 +878,11 @@ a.pure-button-primary {
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background: white;
+    overflow-y: scroll;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
 }
 
 /* We want to give the content area some more padding */

@@ -2,23 +2,23 @@ var VH = window.innerHeight;
 var VW = window.innerWidth;
 var mobile = true;
 if(VW>600){mobile=false}
-var scrollScale = 40;
-if(mobile) scrollScale = 20;
+var scrollScale = 60;
+if(mobile) scrollScale = 40;
 
 
-window2 = $(window)
+let item = document.getElementById("ScrollBody");
 let scroll = document.getElementById("scroll-wrapper");
 let s = document.getElementById("lazyDrift");
 
-let oldPos =  window2.scrollTop();
-let target = window2.scrollTop();
+let oldPos =  item.scrollTop;
+let target = item.scrollTop;
 
 function parallax() {
-  var yPos = window2.scrollTop();
-  if(yPos-oldPos > 60){
+  var yPos = item.scrollTop;
+  if(yPos-oldPos > 6000){
     yPos = oldPos + 10;
     
-  }else if(yPos-oldPos < -60){
+  }else if(yPos-oldPos < -6000){
     yPos = oldPos - 10;
   }
   oldPos = yPos;
@@ -46,9 +46,9 @@ function parallax() {
 }
 
 
-
-window.addEventListener("scroll", function(){
-    target = window2.scrollTop();
-    var refreshIntervalId = setInterval(parallax, 1);
+item =  document.getElementById("ScrollBody");
+item.addEventListener("scroll", function(){
+    target = item.scrollTop;
+    parallax();
     
 });
