@@ -7,11 +7,12 @@ if(mobile) scrollScale = 20;
 
 
 
+
 function parallax() {
    
     var s = document.getElementById("lazyDrift");
     var scroll = document.getElementById("scroll-wrapper");
-  var yPos = window.pageYOffset;  
+  var yPos = $(window).scrollTop();
   s.style.top = 0 - yPos/scrollScale + "%"; 
   
 
