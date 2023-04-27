@@ -3,7 +3,7 @@ var VW = window.innerWidth;
 var mobile = true;
 if(VW>600){mobile=false}
 var scrollScale = 60;
-if(mobile) scrollScale = 40;
+if(mobile) scrollScale = 20;
 
 
 let item = document.getElementById("ScrollBody");
