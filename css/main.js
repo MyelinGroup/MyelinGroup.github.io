@@ -15,10 +15,10 @@ let target = window2.scrollTop();
 
 function parallax() {
   var yPos = window2.scrollTop();
-  if(yPos-oldPos > 5){
+  if(yPos-oldPos > 60){
     yPos = oldPos + 5;
     
-  }else if(yPos-oldPos < -5){
+  }else if(yPos-oldPos < -60){
     yPos = oldPos - 5;
   }
   oldPos = yPos;
