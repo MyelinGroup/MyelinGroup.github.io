@@ -804,7 +804,7 @@ a.pure-button-primary {
 
 @media(max-width:38em){
     #scroll-wrapper-inner {
-        padding-bottom: 120px !important;
+        padding-bottom: 100px !important;
     }
 }
 
