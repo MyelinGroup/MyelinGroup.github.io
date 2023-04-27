@@ -550,6 +550,7 @@ a.pure-button-primary {
         background-color: rgba(178, 178, 178, 0.15);  
         backdrop-filter: blur(3px);
         z-index: 90;
+        width: auto;
     }
 
     
