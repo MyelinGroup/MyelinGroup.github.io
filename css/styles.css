@@ -634,10 +634,13 @@ a.pure-button-primary {
 
 
 .textbackdrop{
-    background-color: #a0a0a015;
+    background-color: #f4f4f4a3;
     color:rgb(33, 33, 33);
     border-radius: 20px;
     box-shadow: 0px 5px 7px 5px rgb(0 0 0 / 10%);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    
 }
 
 .splash-screen{
@@ -806,7 +809,18 @@ a.pure-button-primary {
     #scroll-wrapper-inner {
         padding-bottom: 100px !important;
     }
+    
 }
+
+.brainstem-cut{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+.first-content{
+    margin-top: 120vh;
+}
+
 
 @media(max-height:70em){
     .mobile .splash-head{
