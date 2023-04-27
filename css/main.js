@@ -16,10 +16,10 @@ let target = window2.scrollTop();
 function parallax() {
   var yPos = window2.scrollTop();
   if(yPos-oldPos > 60){
-    yPos = oldPos + 5;
+    yPos = oldPos + 10;
     
   }else if(yPos-oldPos < -60){
-    yPos = oldPos - 5;
+    yPos = oldPos - 10;
   }
   oldPos = yPos;
   s.style.top = 0 - yPos/scrollScale + "%"; 
@@ -49,6 +49,6 @@ function parallax() {
 
 window.addEventListener("scroll", function(){
     target = window2.scrollTop();
-    var refreshIntervalId = setInterval(parallax, 5);
+    var refreshIntervalId = setInterval(parallax, 1);
     
 });
