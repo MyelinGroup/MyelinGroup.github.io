@@ -475,6 +475,13 @@ a.pure-button-primary {
 	padding-top: 40px;
     padding-left: 50px;
     width: 16em;
+
+    /* border-radius: 20px;
+    background-color: rgba(178, 178, 178, 0.2);  
+    -webkit-backdrop-filter: blur(.8px);
+    box-shadow: 0px 8px 13px 8px rgb(0 0 0 / 12%);
+    backdrop-filter: blur(3px); */
+    z-index: 90;
 	
 }
 
@@ -488,11 +495,11 @@ a.pure-button-primary {
 
 }
 .FundingText{
-	top: 0;
-	left: 0;
+	top: 5px;
+	left: 5px;
 	position: absolute;
 	color: #3C3C3C;
-	font-weight: 300;
+	font-weight: 410;
     font-size: 80%;
 }
 
@@ -529,6 +536,8 @@ a.pure-button-primary {
     font-weight: 350;
 }
 
+
+
 /*Mobile Only Variant*/
 @media(max-width:48em){
     .Sponsor_wrapper{
@@ -548,7 +557,7 @@ a.pure-button-primary {
         margin-right: auto;
         border-radius: 20px;
         background-color: rgba(178, 178, 178, 0.15);  
-        -webkit-backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(.8px);
         box-shadow: 0px 4px 8px 4px rgb(0 0 0 / 10%);
         backdrop-filter: blur(3px);
         z-index: 90;
@@ -789,6 +798,15 @@ a.pure-button-primary {
  
     color: #111;
 }
+#scroll-wrapper-inner {
+    padding-bottom: 70px;
+}
+
+@media(max-width:38em){
+    #scroll-wrapper-inner {
+        padding-bottom: 170px !important;
+    }
+}
 
 @media(max-height:70em){
     .mobile .splash-head{
@@ -800,9 +818,7 @@ a.pure-button-primary {
     width:40px !important;
     height:10px   !important;
     display:table-cell;
-    vertical-align:bottom;
-    padding-bottom: 70px;
-  
+    vertical-align:bottom;  
   }
   
 
