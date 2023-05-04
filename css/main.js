@@ -52,3 +52,11 @@ item.addEventListener("scroll", function(){
     parallax();
     
 });
+
+
+//Click Through Functionality
+// $('#ScrollBody').click(e => {
+//   $('#ScrollBody').hide();
+//   $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
+//   $('#ScrollBody').show();
+// });
