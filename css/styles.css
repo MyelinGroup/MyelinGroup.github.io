@@ -513,7 +513,7 @@ a.pure-button-primary {
 
 .Sponsor.Fifteenseventeen{
     border-color:black;
-    border-width:1px;
+    border-width:0px;
     border-style: solid;
     align-self: center;
 }
@@ -594,7 +594,7 @@ a.pure-button-primary {
     
     .Sponsor.Fifteenseventeen{
         border-color:black;
-        border-width:.5px;
+        border-width:0px;
         border-style: solid;
         align-self: center;
     }
