@@ -387,13 +387,13 @@ a.pure-button-primary {
     display: block;
     padding: 0.5em;
     cursor: pointer;
-    pointer-events: all;
-    z-index: 8;
+    z-index: 9;
     margin: 0;
     transition: all 0.15s ease-out;
     margin: 0;
     color:black;
-
+    pointer-events: all!important;
+    display: block;
 }
 
 .blog-header svg{
@@ -401,11 +401,12 @@ a.pure-button-primary {
     margin-top: 5%;
     margin-bottom: -5%;   
     margin-left: 5px;
-    
+    pointer-events: all!important;
 }
 .blog-header h{
     font-size: 110%;
     font-weight: 400;
+    pointer-events: all!important;
 }
 
 .blog-header:hover{
