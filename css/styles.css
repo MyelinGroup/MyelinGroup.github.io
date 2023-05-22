@@ -360,6 +360,8 @@ a.pure-button-primary {
 }
 
 
+
+
 /*
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
@@ -371,12 +373,46 @@ a.pure-button-primary {
 	box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
  	background: #fff;
     width: 100%;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     left: 0;
     top:0;
     z-index: 8;
+    
 }
+
+.blog-header{
+    align-self: right !important;
+    display: block;
+    padding: 0.5em;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 8;
+    margin: 0;
+    transition: all 0.15s ease-out;
+    margin: 0;
+    color:black;
+
+}
+
+.blog-header svg{
+    fill:inherit!important;
+    margin-top: 5%;
+    margin-bottom: -5%;   
+    margin-left: 5px;
+    
+}
+.blog-header h{
+    font-size: 110%;
+    font-weight: 400;
+}
+
+.blog-header:hover{
+    fill: #BD3F3C;
+    color: #BD3F3C!important;
+}
+
 .home-menu .pure-menu-list{
     vertical-align: middle;
 }
