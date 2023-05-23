@@ -405,6 +405,7 @@ a.pure-button-primary {
     fill:inherit!important;
     height: 65%!important;
     margin-left: 8px;
+    margin-right: 4px;
     pointer-events: all!important;
 }
 .blog-header h{
