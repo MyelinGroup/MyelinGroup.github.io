@@ -10,6 +10,7 @@
     font-family: 'Avenir';
 }
 
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
@@ -384,27 +385,28 @@ a.pure-button-primary {
 
 .blog-header{
     align-self: right !important;
-    display: block;
     padding: 0.5em;
     cursor: pointer;
     z-index: 9;
     margin: 0;
     transition: all 0.15s ease-out;
     margin: 0;
-    color:black;
-    pointer-events: all!important;
-    display: block;
+    color: black !important;
+    pointer-events: all !important;
+    padding: 0;
+    align-items: center;
+    display: flex;
+
 }
 
 .blog-header svg{
     fill:inherit!important;
-    margin-top: 5%;
-    margin-bottom: -5%;   
-    margin-left: 5px;
+    height: 65%!important;
+    margin-left: 8px;
     pointer-events: all!important;
 }
 .blog-header h{
-    font-size: 110%;
+    font-size: 130%;
     font-weight: 400;
     pointer-events: all!important;
 }
@@ -1479,4 +1481,8 @@ body {
         font-size: 300%;
     }
 }
+a:visited { 
+    outline: 0;
+    color: initial;
 
+}
