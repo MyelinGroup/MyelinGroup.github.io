@@ -1170,6 +1170,7 @@ a.pure-button-primary {
     margin: auto;
     border-radius: 7px;
 }
+
 #Team-Bios span{
     grid-column-end: span 3;
     height: 100%;
@@ -1192,6 +1193,7 @@ a.pure-button-primary {
 
 @media(max-width:40em){
     #Team-Bios .headShot{
+        height: 27vh;
 
         grid-column-end: span 2;
     }
