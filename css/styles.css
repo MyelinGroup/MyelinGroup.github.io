@@ -1499,6 +1499,7 @@ a:visited {
     align-self: center;
 }
 .popUpMenu {
+    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -1515,6 +1516,8 @@ a:visited {
   }
 
   .popUpMenu_inner {
+    pointer-events: auto;
+    width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -1532,8 +1535,7 @@ a:visited {
   
   .close-button {
     position: absolute;
-    /* right:7px;
-    top:5px; */
+
     align-self: flex-end;
     border: none;
     background: none;
@@ -1547,11 +1549,11 @@ a:visited {
   }
   
   @media (min-width: 768px) {
+    .popUpMenu_inner {
+        width: 50%;
+    }
     .popUpMenu {
-      width: 50%;
-      height: auto;
-      top: 25%;
-      left: 25%;
+        justify-content: center;
     }
   }
   
