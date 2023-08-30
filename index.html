@@ -11,10 +11,32 @@
 	<script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 	</script>
+
+	<script type="text/javascript" src="js/caleandar.min.js"></script>
+	<link rel="stylesheet" href="css/theme3.css"/>
+
 	<script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+		<div id="popUpMenu" class="popUpMenu">
+			<div id="popUpMenu_inner" class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 popUpMenu_inner textbackdrop">
+				<!-- <div class=""> -->
+				<button id="close-button" class="close-button">&times;</button>
+
+					<h3 class="popUpMenu_heading">
+						Attention!
+					</h3>
+				<p class = "left-just-hh popUpMenu_content">
+					Myelin club meetings begin next week, if you are interested in attending and would like further information
+                    please fill out the sign up form below.<br> We look foward to seeing you there!
+				</p>
+				<button class="btn" id="continue-button"  onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSeWM3HYmumyDHRXvilcrbtYZAqLTK2rR6cXBR7mbeCqJzEM5A/viewform?usp=sf_link'">Sign Up Form</button>
+				<!-- <p style="font-size: 70%; color: #A2A2A2">Applications accepted until May 1st. </p> -->
+
+		</div>
+	</div>
 
 <div class="header">
     <div class="home-menu">
@@ -33,6 +55,11 @@
         </ul>
 	</div>
 
+
+	<div id="bell-icon" class="bell-icon">
+		<i class="fas fa-bell"></i>
+		<div class="notification-dot"></div>
+	  </div>
 	<!-- ff6719 -->
 	<a href="https://myelin.substack.com" class = "blog-header">
 		<h>Blog</h>
@@ -284,6 +311,21 @@ Carefully Selected Members will be provided cutting edge tech, housing, and a pa
 
     </div>
 		</div>
+
+		<!-- <div class="content" id = "calandar">
+			<h2 class="content-head is-center extended_underline">Event Calander</h2>
+
+			<div class="textbackdrop">
+				<div style="display: block; position: relative;">
+				<div id = "calenderEle">
+
+				</div>
+				</div>
+			</div>
+
+			<div id="calenderEle"></div>
+
+		</div> -->
 	
 		<div class="content" id = "Contact">
 			<h2 class="content-head is-center extended_underline">Contact</h2>

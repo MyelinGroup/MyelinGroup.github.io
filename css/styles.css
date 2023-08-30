@@ -1491,3 +1491,124 @@ a:visited {
     color: initial;
 
 }
+
+
+
+#continue-button{
+    width: 50%;
+    align-self: center;
+}
+.popUpMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: top;  /* Vertically center the content */
+    align-items: center;      /* Horizontally center the content */
+    animation: slideIn 0.5s ease-in-out;
+    z-index: 10;
+    overflow: none;
+  }
+
+  .popUpMenu_inner {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f4f4f4ce;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    
+  }
+  
+  .close-button,
+  .continue-button {
+    cursor: pointer;
+  }
+  
+  .close-button {
+    position: absolute;
+    right:7px;
+    top:5px;
+    align-self: flex-end;
+    border: none;
+    background: none;
+    font-size: xx-large;
+    font-weight: 300;
+    color: #555;
+    animation: all .5s ease-in-out;
+  }
+  .close-button:hover {
+   color: #000;
+  }
+  
+  @media (min-width: 768px) {
+    .popUpMenu {
+      width: 50%;
+      height: auto;
+      top: 25%;
+      left: 25%;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+.popUpMenu_content{
+    padding-bottom: 1em;
+    padding-top: .5em;
+    text-align: justify;
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 400;
+}
+  .popUpMenu_heading{
+    text-align: center;
+    border-bottom-style: solid;
+	border-bottom-color: #848484 !important;
+	border-bottom-width: 1px;
+	padding-bottom: .05em;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 30%;
+    margin-right: 30%;
+    letter-spacing: 120%;
+    font-size: large;
+    
+  }
+
+  .bell-icon {
+    position: fixed;
+    top: 13px;
+    right: 100px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 10;
+    animation: color 1s ease-in-out;
+
+  }
+
+  .bell-icon:hover {
+    color: #000;
+  }
+  
+  .notification-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+  }
