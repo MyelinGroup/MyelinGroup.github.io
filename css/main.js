@@ -84,24 +84,34 @@ var calEle = document.getElementById('calenderEle');
 //   $(document.elementFromPoint(e.clientX, e.clientY)).trigger("click");
 //   $('#ScrollBody').show();
 // });
-document.addEventListener("DOMContentLoaded", function() {
-  const menu = document.getElementById("popUpMenu");
-  const closeButton = document.getElementById("close-button");
-  const continueButton = document.getElementById("continue-button");
-  const bellIcon = document.getElementById("bell-icon");
+var popUpDisabled = true;
 
-  // Show menu on load
-  menu.style.display = "flex";
+  document.addEventListener("DOMContentLoaded", function() {
+    const menu = document.getElementById("popUpMenu");
+    const closeButton = document.getElementById("close-button");
+    const continueButton = document.getElementById("continue-button");
+    const bellIcon = document.getElementById("bell-icon");
 
-  // Function to close menu and unfreeze background scrolling
-  const closeMenu = () => {
-    menu.style.display = "none";
-  };
-  const showMenu = () => {
+    // Show menu on load
+    if(!popUpDisabled){
+
     menu.style.display = "flex";
-  };
 
-  // Close menu on 'X' or 'Continue'
-  closeButton.addEventListener("click", closeMenu);
-  bellIcon.addEventListener("click", showMenu);
-});
+    // Function to close menu and unfreeze background scrolling
+    const closeMenu = () => {
+      menu.style.display = "none";
+    };
+    const showMenu = () => {
+      menu.style.display = "flex";
+    };
+
+    // Close menu on 'X' or 'Continue'
+    closeButton.addEventListener("click", closeMenu);
+    bellIcon.addEventListener("click", showMenu);
+  }else{
+    menu.style.display = "none";
+    bellIcon.style.display = "none";
+
+
+  }
+  });
