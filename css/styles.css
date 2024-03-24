@@ -403,6 +403,7 @@ body{
     display: block;
     overflow-y: scroll;
     max-width: 1200px;
+    overflow-x: hidden;
 }
 
 .blog-header{
@@ -528,8 +529,8 @@ body{
  */
 
 .Sponsor_wrapper{
-	/* position: fixed; */
-	/* top: 20em; */
+	/* position: fixed;
+	top: 20em; */
 	text-align: left;
 
 	display: flex;
@@ -611,13 +612,12 @@ body{
         text-align: center;
         padding: 8px;
         left: 2.5%;
-    
+        margin-top: -50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     
         font-size: 1.5em;
-        top:100vh;
         padding-top: 30px;
         margin-left: auto;
         margin-right: auto;
@@ -892,7 +892,7 @@ body{
    
     /* margin-bottom: -100px; */
 }
-.mobile{
+.mobile.splashery{
     padding-top: 30%;
     margin-top: -40px;
     
@@ -1046,6 +1046,17 @@ body{
     color: rgba(255, 255, 255, 0.485);
 
 }
+#Terminal_outer{
+margin: 0;
+padding: 0;
+
+}
+/* #Hackerhouse_inner p{
+    color: rgba(255, 255, 255, 0.485);
+
+    padding: none;
+    margin: none;
+} */
 #Terminal_log{
     color: rgba(255, 255, 255, 0.9)!important;
 

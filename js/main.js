@@ -107,8 +107,23 @@ function handleScroll() {
 
 }
 
-function openKeyboard() {
-  document.getElementById('hiddenInput').focus(); 
+function openKeyboard(close = false) {
+  ele = document.getElementById('hiddenInput')
+console.log("keyboard")
+  if(close==true){
+    ele.blur();
+    ele.disabled = true;
+    ele.readOnly = true;
+
+  }else{
+    ele.focus();
+
+    ele.disabled = false;
+    ele.readOnly = false;
+  }
+  // ele.setAttribute('tabindex', '0');
+
+
 }
 let scrollEventDebounce = true;
 function hackerHouseAnimation(){
@@ -188,6 +203,7 @@ function hackerHouseAnimation(){
           cursorBlinker = null;
           window.removeEventListener("keypress",terminalTyper)
           terminalState+=1
+          openKeyboard(true);
         }else{
         anime({
           targets: document.getElementById("Terminal_Enter_Text"),
@@ -207,7 +223,6 @@ function hackerHouseAnimation(){
 
     
 
-    document.getElementById("Terminal").addEventListener("click",openKeyboard)
 
   }
   }else{
@@ -303,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   requestAnimationFrame(animationLoop)
 
+  document.getElementById("Terminal_outer").addEventListener("click",openKeyboard)
 
   // item.addEventListener('scroll', handleScroll);
 
