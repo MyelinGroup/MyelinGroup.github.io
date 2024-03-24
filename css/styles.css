@@ -1052,14 +1052,16 @@ body{
 #Terminal_outer{
 margin: 0;
 padding: 0;
+align-self: baseline;
+position: fixed;
+left:50px;
+top: 30px;
 
 }
-/* #Hackerhouse_inner p{
-    color: rgba(255, 255, 255, 0.485);
+#Hackerhouse_inner a{
+   font-size: x-large;
+}
 
-    padding: none;
-    margin: none;
-} */
 #Terminal_log{
     color: rgba(255, 255, 255, 0.9)!important;
 
