@@ -119,14 +119,14 @@ function hackerHouseAnimation(){
 
     anime({
       targets:item,
-      easing: 'easeInOutCubic', 
+      easing: 'easeInOutQuad', 
       scrollTop:item.scrollTop+distanceFromTop-50,
-      duration: 1000
+      duration: 900,
     });
 
     anime({
       targets:element,
-      easing: 'easeInOutCubic', 
+      easing: 'easeInOutQuad', 
       width: "100vw",
       height: "100vh",
       backgroundColor: "#000",
@@ -136,12 +136,22 @@ function hackerHouseAnimation(){
     var cursor = true;
     var speed = 600;
     var cursorBlinker = setInterval(() => {
+      ele = document.getElementsByClassName('cursor_blinking')[0]
       if(cursor) {
-        document.getElementsByClassName('cursor_blinking')[0].style.opacity = 0;
+        anime({
+          targets: ele,
+          easing: 'linear', 
+          opacity: "1",
+          duration: 50,
+        });
         cursor = false;
       }else {
-        document.getElementsByClassName('cursor_blinking')[0].style.opacity = 1;
-        cursor = true;
+        anime({
+          targets: ele,
+          easing: 'linear', 
+          opacity: "0",
+          duration: 50,
+        });        cursor = true;
       }
     }, speed);
 
@@ -151,24 +161,24 @@ function hackerHouseAnimation(){
       if(terminalState==text.length){
         if(event.key=="Enter"){          
 
-          Terminal_loading
           anime({
             targets: document.getElementById("Terminal_loading"),
             easing: 'linear', 
             opacity: ".7",
             duration: 1000,
           });
-
+          anime.remove("Terminal_Enter_Text");
           anime({
             targets: document.getElementById("Terminal_Enter_Text"),
             easing: 'linear', 
             opacity: "0",
             duration: 50,
           });
+
           document.getElementsByClassName('cursor_blinking')[0].style.opacity = 0;
           clearInterval(cursorBlinker);
           window.removeEventListener("keypress",terminalTyper)
-
+          terminalState+=1
         }else{
         anime({
           targets: document.getElementById("Terminal_Enter_Text"),

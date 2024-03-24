@@ -386,18 +386,23 @@ a.pure-button-primary {
     z-index: 8;
 }
 
+#header{
+    width: 100vw;
+}
 body{
     flex-direction: column;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 #BodyContainer{
     width: 100%;
     display: block;
     overflow-y: scroll;
+    max-width: 1200px;
 }
 
 .blog-header{
@@ -717,9 +722,11 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items:end;
+    align-items:center;
     height: 100%;
     width: 100%;
+    
+    padding-top: 10px;
     /* flex-; */
     overflow:visible;
 
@@ -729,7 +736,6 @@ body{
     width: 50%;
     /* left:0; */
     height: 100%;
-    padding-top: 17vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -748,20 +754,26 @@ body{
     /* position: absolute; */
     width: 50%;
     /* right:0; */
-    padding-top: 17vw;
     height: 100%;
     z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     overflow:visible;
 }
 
 .Splash-Brain{
     /* position: absolute; */
-    margin-top: 15%;
-    width: 75%;
+    margin-top: -50%;
+    height:20%;
+    /* width: 75%; */
+    width: 95%;
+
     display: block;
-    margin-right: auto;
-    float: left;
+   
     margin-bottom: -100px;
+    overflow: visible;
 }
 .extended_underline{
 	border-bottom-style: solid;
@@ -776,9 +788,7 @@ body{
 
 @media (max-width: 700px) { 
 	
-    .Splash-Brain{
-        width: 95%;
-    }
+  
     
     .extended_underline{
         border-bottom-style: solid;
@@ -791,10 +801,11 @@ body{
 
 }
 @media (max-width: 1400px) { 
-	
-    .Splash-Brain{
-        width: 95%;
+	.Splash-Brain{
+
+    width: 95%;
     }
+
   
 }
 
@@ -896,9 +907,9 @@ body{
 }
 
 .brainstem-cut{
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
+    width: inherit;
     height: 100%;
     z-index: -10;
     overflow:visible;
