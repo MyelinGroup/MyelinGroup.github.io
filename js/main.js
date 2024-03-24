@@ -107,11 +107,15 @@ function handleScroll() {
 
 }
 
+function openKeyboard() {
+  document.getElementById('hiddenInput').focus(); 
+}
 let scrollEventDebounce = true;
 function hackerHouseAnimation(){
   const element = document.getElementById('Hackerhouse_inner'); 
   const rect = element.getBoundingClientRect();
   const distanceFromTop = rect.top;
+  var cursorBlinker = null;
   if(distanceFromTop<900&&distanceFromTop>-200){
     if(scrollEventDebounce){
     scrollEventDebounce= false;
@@ -135,6 +139,8 @@ function hackerHouseAnimation(){
 
     var cursor = true;
     var speed = 600;
+    if(cursorBlinker==null){
+      openKeyboard();
     var cursorBlinker = setInterval(() => {
       ele = document.getElementsByClassName('cursor_blinking')[0]
       if(cursor) {
@@ -151,13 +157,15 @@ function hackerHouseAnimation(){
           easing: 'linear', 
           opacity: "0",
           duration: 50,
-        });        cursor = true;
+        });        
+        cursor = true;
       }
     }, speed);
+  }
 
     var terminalState = 0;
     function terminalTyper(event){
-      var text = ["./","t","o","p","_se","cr","et","/code_","names","/arboretum.sh"];
+      var text = ["./","t","o","p","_se","cr","et","/code_","names","/arborhouse.sh"];
       if(terminalState==text.length){
         if(event.key=="Enter"){          
 
@@ -177,6 +185,7 @@ function hackerHouseAnimation(){
 
           document.getElementsByClassName('cursor_blinking')[0].style.opacity = 0;
           clearInterval(cursorBlinker);
+          cursorBlinker = null;
           window.removeEventListener("keypress",terminalTyper)
           terminalState+=1
         }else{
@@ -195,6 +204,10 @@ function hackerHouseAnimation(){
       document.getElementById("Terminal").textContent = text.slice(0,terminalState).join("");
     }
     window.addEventListener("keypress",terminalTyper)
+
+    
+
+    document.getElementById("Terminal").addEventListener("click",openKeyboard)
 
   }
   }else{
