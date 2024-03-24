@@ -1029,11 +1029,9 @@ body{
 
 
 
-/* #Hackerhouse .textbackdrop{
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-} */
+#Hackerhouse .textbackdrop{
+    overflow: hidden;
+}
 #Hackerhouse{
 
     height: 110vh;
