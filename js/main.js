@@ -179,9 +179,22 @@ function hackerHouseAnimation(){
   }
 
     var terminalState = 0;
+    var segments = [2,1,1,1,2,2,3,4,5,5,5,5,5]
+    var text = "./top_secret/projects/arborhouse.sh"
+    var textSplit = [];
+    let curIndex = 0;
+    segments.forEach(x=>{
+      if(curIndex>text.length) return;
+      if(curIndex+x>text.length) textSplit.concat(text.slice(curIndex));
+      textSplit.push(text.slice(curIndex,curIndex+x));
+      // console.log(text.slice(curIndex,curIndex+x),curIndex);
+
+      curIndex +=x;
+
+    })
+
     function terminalTyper(event){
-      var text = ["./","t","o","p","_se","cr","et","/code_","names","/arborhouse.sh"];
-      if(terminalState==text.length){
+      if(terminalState==textSplit.length){
         if(event.key=="Enter"){          
 
           anime({
@@ -190,7 +203,7 @@ function hackerHouseAnimation(){
             opacity: ".7",
             duration: 1000,
           });
-          anime.remove("Terminal_Enter_Text");
+
           anime({
             targets: document.getElementById("Terminal_Enter_Text"),
             easing: 'linear', 
@@ -204,20 +217,21 @@ function hackerHouseAnimation(){
           window.removeEventListener("keypress",terminalTyper)
           terminalState+=1
           openKeyboard(true);
+
         }else{
-        anime({
-          targets: document.getElementById("Terminal_Enter_Text"),
-          easing: 'linear', 
-          opacity: ".7",
-          duration: 1000,
-        });
-      }
+          anime({
+            targets: document.getElementById("Terminal_Enter_Text"),
+            easing: 'linear', 
+            opacity: ".7",
+            duration: 1000,
+          });
+        } 
         return;
       }
       terminalState+=1;
+    
       document.getElementById("Terminal_Filler").textContent = "";
-      text.slice(0,terminalState)
-      document.getElementById("Terminal").textContent = text.slice(0,terminalState).join("");
+      document.getElementById("Terminal").textContent = textSplit.slice(0,terminalState).join("");
     }
     window.addEventListener("keypress",terminalTyper)
 
