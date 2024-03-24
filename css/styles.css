@@ -24,7 +24,7 @@ html {
 
 #scroll-wrapper {
   width:100%;
-  height:100vh;
+  height:100%;
   position: absolute;
   top:0;
   right:0;
@@ -290,6 +290,8 @@ body {
     color: #7f8c8d;
     font-size: 13px;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 h1,
@@ -378,12 +380,24 @@ a.pure-button-primary {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: relative;
     left: 0;
     top:0;
     z-index: 8;
-    
-    
+}
+
+body{
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+#BodyContainer{
+    width: 100%;
+    display: block;
+    overflow-y: scroll;
 }
 
 .blog-header{
@@ -509,8 +523,8 @@ a.pure-button-primary {
  */
 
 .Sponsor_wrapper{
-	position: absolute;
-	top: 20em;
+	/* position: fixed; */
+	/* top: 20em; */
 	text-align: left;
 
 	display: flex;
@@ -540,9 +554,11 @@ a.pure-button-primary {
 
 }
 .FundingText{
-	top: 5px;
-	left: 5px;
-	position: absolute;
+
+    margin-top: -5px;
+    margin-left: -5px;
+
+	/* position: absolute; */
 	color: #3C3C3C;
 	font-weight: 410;
     font-size: 80%;
@@ -678,6 +694,8 @@ a.pure-button-primary {
     
 
 
+
+
 .textbackdrop{
     background-color: #f4f4f4a3;
     color:rgb(33, 33, 33);
@@ -689,19 +707,32 @@ a.pure-button-primary {
 }
 
 .splash-screen{
-    margin-top: 5em;
-    padding: 2em;
-    height: 110vh;
-    overflow: hidden;
+    padding: 4em;
+    padding-top: 5em;
+    height: 100%;
+    overflow: visible;
+
+}
+.desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:end;
+    height: 100%;
+    width: 100%;
+    /* flex-; */
+    overflow:visible;
+
 }
 .left-fill{
-    position: absolute;
+    /* position: absolute; */
     width: 50%;
-    left:0;
+    /* left:0; */
     height: 100%;
     padding-top: 17vw;
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
     z-index: -1;
 
@@ -714,21 +745,23 @@ a.pure-button-primary {
 }
 
 .right-fill{
-    position: absolute;
+    /* position: absolute; */
     width: 50%;
-    right:0;
-    height: 100vh;
+    /* right:0; */
+    padding-top: 17vw;
+    height: 100%;
     z-index: -1;
-    overflow: hidden;
+    overflow:visible;
 }
 
 .Splash-Brain{
-    position: absolute;
+    /* position: absolute; */
     margin-top: 15%;
     width: 75%;
     display: block;
     margin-right: auto;
     float: left;
+    margin-bottom: -100px;
 }
 .extended_underline{
 	border-bottom-style: solid;
@@ -746,9 +779,7 @@ a.pure-button-primary {
     .Splash-Brain{
         width: 95%;
     }
-    .right-fill{
-        height: 100vh;
-    }
+    
     .extended_underline{
         border-bottom-style: solid;
         border-bottom-color: #848484 !important;
@@ -764,15 +795,15 @@ a.pure-button-primary {
     .Splash-Brain{
         width: 95%;
     }
-    .right-fill{
-        height: 100vh;
-    }
+  
 }
 
 .splash-wrap{
-    position: inherit;
+    /* display: block; */
+    top: 60%;
+    position: static;
     padding: 0;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     
 }
 
@@ -798,14 +829,14 @@ a.pure-button-primary {
 }
 
 .splash-head {
-    top:-8em ;
+    position: relative;
     font-size: 20px;
     font-weight: bold;
     color: black;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .splash-container {
@@ -838,6 +869,10 @@ a.pure-button-primary {
     overflow: hidden;
     position: absolute;
 }
+.mobile{
+    padding-top: 30%;
+    
+}
 
 .mobile .splash-head{
     text-align: center;
@@ -861,10 +896,13 @@ a.pure-button-primary {
 }
 
 .brainstem-cut{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    height: 100%;
+    z-index: -10;
+    overflow:visible;
+
 }
 .first-content{
     margin-top: 120vh;
@@ -922,11 +960,11 @@ a.pure-button-primary {
  */
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
-    position: absolute;
+    position: relative;
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     top:0;
     left:0;
     bottom:0;
@@ -1208,11 +1246,16 @@ a.pure-button-primary {
 
  
 
-
+/* #Team .textbackdrop{
+    padding-left: 0!important;
+    padding-right: 0;
+} */
 #Team-Bios{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+    max-width: 900px; /* Adjust the max-width value as needed */
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 40px;
     padding-bottom: 40px;    
 }
@@ -1249,6 +1292,7 @@ a.pure-button-primary {
     height: 100%;
 }
 
+
 #Team-Bios h{
     font-size: x-large;
     display: block;
@@ -1263,6 +1307,18 @@ a.pure-button-primary {
     margin-right: 10px;
 
 }
+#Team-Bios .left{
+    align-items:flex-start;
+    text-align: left;
+    border-width: 0px 0px 0px 1px;
+    margin-left: 10px;
+}
+#Team-Bios .right{
+    border-width: 0px 1px 0px 0px;
+    text-align: right;
+    align-items:flex-end;
+    margin-right: 10px;
+}
 
 @media(max-width:40em){
     #Team-Bios .headShot{
@@ -1273,19 +1329,17 @@ a.pure-button-primary {
     #Team-Bios span{
         grid-column-end: span 2;
     }
+    #Team-Bios .left{
+  
+        margin-left: 1px;
+    }
+    #Team-Bios .right{
+
+        margin-right: 1px;
+    }
     
 }
 
-#Team-Bios .left{
-    align-items:flex-start;
-    text-align: left;
-    border-width: 0px 0px 0px 1px;
-}
-#Team-Bios .right{
-    border-width: 0px 1px 0px 0px;
-    text-align: right;
-    align-items:flex-end;
-}
 
 
 

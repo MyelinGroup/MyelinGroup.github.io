@@ -5,7 +5,7 @@ if(VW>600){mobile=false}
 var scrollScale = 60;
 if(mobile) scrollScale = 20;
 
-let item = document.getElementById("ScrollBody");
+let item = document.getElementById("BodyContainer");
 let scroll = document.getElementById("scroll-wrapper");
 let s = document.getElementById("lazyDrift");
 
@@ -42,7 +42,7 @@ function throttle(callback, delay) {
 }
 
 
-
+''
 function parallax() {
   var yPos = item.scrollTop;
   if(yPos-oldPos > 6000){
@@ -75,8 +75,6 @@ function parallax() {
 
 }
 
-
-item =  document.getElementById("ScrollBody");
 // item.addEventListener("scroll", function(){
 //     target = item.scrollTop;
 //     parallax();
@@ -87,15 +85,15 @@ const parallaxElements = document.querySelectorAll('.parallax-layer');
 
 function handleScroll() { 
     const scrollY = item.scrollTop;
-    const scrollProgress = scrollY / (document.body.scrollHeight - window.innerHeight);
+    const scrollProgress = scrollY / (item.scrollHeight - window.innerHeight);
 
     parallaxElements.forEach(element => {
       if(element.style.opacity == 0){
 
-        // console.log("Not updating");
         return;
 
       }
+      console.log()
         const speed = element.dataset.parallaxSpeed || 0.5; // Get speed from data attribute 
         const offset = scrollProgress * speed * -200; // Customize offset value as needed
 
@@ -114,14 +112,21 @@ function hackerHouseAnimation(){
   const element = document.getElementById('Hackerhouse_inner'); 
   const rect = element.getBoundingClientRect();
   const distanceFromTop = rect.top;
-  if(distanceFromTop<900&&scrollEventDebounce){
+  if(distanceFromTop<900&&distanceFromTop>-200){
+    if(scrollEventDebounce){
     scrollEventDebounce= false;
-    $(item).scrollTop(item.scrollTop+distanceFromTop);
     console.log(item.scrollTop+distanceFromTop)
 
     anime({
+      targets:item,
+      easing: 'easeInOutCubic', 
+      scrollTop:item.scrollTop+distanceFromTop-50,
+      duration: 1000
+    });
+
+    anime({
       targets:element,
-      easing: 'linear', 
+      easing: 'easeInOutCubic', 
       width: "100vw",
       height: "100vh",
       backgroundColor: "#000",
@@ -130,7 +135,7 @@ function hackerHouseAnimation(){
 
     var cursor = true;
     var speed = 600;
-    setInterval(() => {
+    var cursorBlinker = setInterval(() => {
       if(cursor) {
         document.getElementsByClassName('cursor_blinking')[0].style.opacity = 0;
         cursor = false;
@@ -140,11 +145,10 @@ function hackerHouseAnimation(){
       }
     }, speed);
 
-    var terminalState = 9;
+    var terminalState = 0;
     function terminalTyper(event){
-      var text = [".","/","t","o","p","_se","cr","et","/code_","name","/arboretum.sh"];
+      var text = ["./","t","o","p","_se","cr","et","/code_","names","/arboretum.sh"];
       if(terminalState==text.length){
-        console.log(event.key);
         if(event.key=="Enter"){          
 
           Terminal_loading
@@ -161,7 +165,8 @@ function hackerHouseAnimation(){
             opacity: "0",
             duration: 50,
           });
-
+          document.getElementsByClassName('cursor_blinking')[0].style.opacity = 0;
+          clearInterval(cursorBlinker);
           window.removeEventListener("keypress",terminalTyper)
 
         }else{
@@ -172,7 +177,6 @@ function hackerHouseAnimation(){
           duration: 1000,
         });
       }
-
         return;
       }
       terminalState+=1;
@@ -182,7 +186,9 @@ function hackerHouseAnimation(){
     }
     window.addEventListener("keypress",terminalTyper)
 
-
+  }
+  }else{
+    scrollEventDebounce = true;
   }
 
 
@@ -230,7 +236,7 @@ animationFunctions.push(hackerHouseAnimation)
 // });
 var popUpDisabled = true;
 
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() { //pop up notif scripting
     const menu = document.getElementById("popUpMenu");
     const closeButton = document.getElementById("close-button");
     const continueButton = document.getElementById("continue-button");
@@ -264,6 +270,7 @@ var popUpDisabled = true;
 
 
 document.addEventListener("DOMContentLoaded", function() {
+  console.log(document.getElementById("lazyDrift").style);
   function animationLoop(){
     animationFunctions.forEach(ele =>{
       ele();
