@@ -131,7 +131,7 @@ function hackerHouseAnimation(){
   const rect = element.getBoundingClientRect();
   const distanceFromTop = rect.top;
   var cursorBlinker = null;
-  if(distanceFromTop<900&&distanceFromTop>-200){
+  if(distanceFromTop<350&&distanceFromTop>-200){
     if(scrollEventDebounce){
     scrollEventDebounce= false;
     console.log(item.scrollTop+distanceFromTop)
