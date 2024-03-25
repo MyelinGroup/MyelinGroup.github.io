@@ -1049,6 +1049,9 @@ body{
     color: rgba(255, 255, 255, 0.485);
 
 }
+
+
+
 #Terminal_outer{
 margin: 0;
 padding: 0;
@@ -1065,6 +1068,21 @@ top: 30px;
 #Terminal_log{
     color: rgba(255, 255, 255, 0.9)!important;
 
+}
+
+@media (max-width: 700px) { 
+
+    #Hackerhouse_inner a{
+        font-size:100%;
+     }
+     #Terminal_outer{
+        position: relative;
+        align-self: baseline;
+        left:0;
+        top: 0px;
+
+    }
+     
 }
 
 
@@ -1785,6 +1803,9 @@ a:visited {
   }
 
 
+
+
+
   .animate-pulse:nth-child(2) { 
     animation-delay: 0.25s; 
   }
@@ -1799,3 +1820,5 @@ a:visited {
   .animate-pulse:nth-child(5) { 
     animation-delay: 1s; 
   }
+
+

@@ -12,6 +12,43 @@ let s = document.getElementById("lazyDrift");
 let oldPos =  item.scrollTop;
 let target = item.scrollTop;
 
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  console.log("HSBDIHBDIfj")
+  document.getElementById("BodyContainer").style.overflow = "hidden";
+  // if (window.addEventListener) // older FF
+  //     window.addEventListener('DOMMouseScroll', preventDefault, false);
+  // window.onwheel = preventDefault; // modern standard
+  // window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  // window.ontouchmove  = preventDefault; // mobile
+  // document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+  document.getElementById("BodyContainer").style.overflowY = "scroll";
+
+    // if (window.removeEventListener)
+    // //     window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    // window.onmousewheel = document.onmousewheel = null; 
+    // window.onwheel = null; 
+    // window.ontouchmove = null;  
+    // document.onkeydown = null;  
+}
 
 animationFunctions = []
 
@@ -133,22 +170,32 @@ function hackerHouseAnimation(){
   var cursorBlinker = null;
   if(distanceFromTop<350&&distanceFromTop>-200){
     if(scrollEventDebounce){
+      disableScroll();
     scrollEventDebounce= false;
     console.log(item.scrollTop+distanceFromTop)
 
     anime({
       targets:item,
       easing: 'easeInOutQuad', 
-      scrollTop:item.scrollTop+distanceFromTop-50,
+      scrollTop:item.scrollTop+distanceFromTop-80,
       duration: 900,
     });
 
     anime({
       targets:element,
-      easing: 'easeInOutQuad', 
-      width: "100vw",
-      height: "100vh",
+      easing: 'easeInOutQuad',
       backgroundColor: "#000",
+      height: "90vh",
+      duration: 1000,
+      callback:()=>{}
+    });
+
+    anime({
+      targets:document.getElementById('Hackerhouse'),
+      easing: 'easeInOutQuad', 
+      // width: "100vw",
+      padding: 0,
+      // height: "100vh",
       duration: 1000
     });
 
@@ -183,6 +230,8 @@ function hackerHouseAnimation(){
     var text = "./top_secret/projects/arborhouse.sh"
     var textSplit = [];
     let curIndex = 0;
+    let backspaceAnimationRunning = false;
+
     segments.forEach(x=>{
       if(curIndex>text.length) return;
       if(curIndex+x>text.length) textSplit.concat(text.slice(curIndex));
@@ -194,9 +243,11 @@ function hackerHouseAnimation(){
     })
 
     function terminalTyper(event){
-      if(terminalState==textSplit.length){
-        if(event.key=="Enter"){          
 
+      if(terminalState==textSplit.length){
+
+        if(event.key=="Enter"){          
+          enableScroll();
           anime({
             targets: document.getElementById("Terminal_loading"),
             easing: 'linear', 
@@ -219,21 +270,47 @@ function hackerHouseAnimation(){
           openKeyboard(true);
 
         }else{
+        document.getElementById("Terminal_Enter_Text").textContent="Press Enter"
+        if(backspaceAnimationRunning){anime.remove( document.getElementById("Terminal_Enter_Text"));}
           anime({
             targets: document.getElementById("Terminal_Enter_Text"),
-            easing: 'linear', 
-            opacity: ".7",
+            easing: 'easeInOutQuad', 
+            keyframes: [
+              {opacity: .5},
+            ],
             duration: 1000,
           });
         } 
         return;
       }
-      terminalState+=1;
-    
-      document.getElementById("Terminal_Filler").textContent = "";
-      document.getElementById("Terminal").textContent = textSplit.slice(0,terminalState).join("");
+      console.log(backspaceAnimationRunning)
+      if(event.key=="Backspace"){
+        if(!backspaceAnimationRunning){
+          backspaceAnimationRunning = true
+        document.getElementById("Terminal_Enter_Text").textContent="    Keep Typing"
+
+          anime({
+            targets: document.getElementById("Terminal_Enter_Text"),
+            easing: 'easeInOutQuad', 
+            keyframes: [
+              {opacity: .85},
+              {opacity: 0},
+          ],
+            duration: 2000,
+            loop: true
+          });
+        }
+       
+        }else{
+          document.getElementById("Terminal_Enter_Text").style.opacity = 0;
+          if(backspaceAnimationRunning){anime.remove( document.getElementById("Terminal_Enter_Text"));}
+          backspaceAnimationRunning = false;
+          terminalState+=1;
+          document.getElementById("Terminal_Filler").textContent = "";
+          document.getElementById("Terminal").textContent = textSplit.slice(0,terminalState).join("");
+        }
     }
-    window.addEventListener("keypress",terminalTyper)
+    window.addEventListener("keydown",terminalTyper)
 
     
 
