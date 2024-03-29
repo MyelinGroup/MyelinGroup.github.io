@@ -304,10 +304,6 @@ label {
     color: #34495e;
 }
 
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
 
 /*
  * -- LAYOUT STYLES --
@@ -932,7 +928,7 @@ body{
 
 }
 .first-content{
-    margin-top: 120vh;
+    margin-top: 80vh;
 }
 
 
@@ -1036,8 +1032,14 @@ body{
     overflow: hidden;
 }
 #Hackerhouse{
+    min-height: 110vh;
+}
+#Hackerhouse_inner{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
 
-    height: 110vh;
 }
 .cursor_blinking{
     color: #fff;
@@ -1049,16 +1051,46 @@ body{
     color: rgba(255, 255, 255, 0.485);
 
 }
+.Coming_Soon_Text{
 
+    position: absolute !important;
+    right:50%;
+    top:30%;
+    opacity: 0%;
+    transform: translate(50%,50%);
+    background-color: #2b2b2bd2;
+    z-index: 10;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Coming_Soon_Text a{
+font-size: larger !important;
+font-weight: 300 !important;
+}
+
+
+#Hackerhouse [role="status"]{
+    /* display: none; */
+}
+
+#Hackerhouse [role="content"]{
+    display: none;
+}
 
 
 #Terminal_outer{
 margin: 0;
 padding: 0;
-align-self: baseline;
-position: fixed;
-left:50px;
-top: 30px;
+margin-bottom: 20px;
+/* position: fixed; */
+/* left:50px; */
+/* top: 30px; */
+align-self:baseline;
 
 }
 #Hackerhouse_inner a{
@@ -1068,6 +1100,14 @@ top: 30px;
 #Terminal_log{
     color: rgba(255, 255, 255, 0.9)!important;
 
+}
+
+#Terminal_loading{
+    position: absolute;
+    right:50%;
+    top:50%;
+    opacity: 0%;
+    transform: translate(50%,50%);
 }
 
 @media (max-width: 700px) { 
@@ -1084,6 +1124,8 @@ top: 30px;
     }
      
 }
+
+
 
 
 .lds-ring {
@@ -1123,7 +1165,9 @@ top: 30px;
   }
 
 
-
+.h-300{
+    height: 300px;
+}
 
 .brick-house {
     width: 100%;

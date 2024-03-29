@@ -163,16 +163,21 @@ console.log("keyboard")
 
 }
 let scrollEventDebounce = true;
+let hackerHouseRunOnce = false; // ensures onyl single run
 function hackerHouseAnimation(){
   const element = document.getElementById('Hackerhouse_inner'); 
   const rect = element.getBoundingClientRect();
   const distanceFromTop = rect.top;
   var cursorBlinker = null;
   if(distanceFromTop<350&&distanceFromTop>-200){
-    if(scrollEventDebounce){
+    if(scrollEventDebounce && !hackerHouseRunOnce){
+      hackerHouseRunOnce=true;
       disableScroll();
     scrollEventDebounce= false;
     console.log(item.scrollTop+distanceFromTop)
+
+    
+
 
     anime({
       targets:item,
@@ -182,10 +187,21 @@ function hackerHouseAnimation(){
     });
 
     anime({
+      targets: document.getElementById("Terminal_Filler"),
+      easing: 'easeInOutQuad', 
+      keyframes: [
+        {opacity: 0},
+        {opacity: .7},
+    ],
+      duration: 1500,
+      loop: true
+    });
+
+    anime({
       targets:element,
       easing: 'easeInOutQuad',
       backgroundColor: "#000",
-      height: "90vh",
+      minHeight: "90vh",
       duration: 1000,
       callback:()=>{}
     });
@@ -261,6 +277,32 @@ function hackerHouseAnimation(){
             opacity: "0",
             duration: 50,
           });
+
+          setTimeout(()=>{
+            anime({
+              targets: document.getElementById("Terminal_loading"),
+              easing: 'linear', 
+              opacity: "0",
+              duration: 1000,
+            });
+            setTimeout(()=>{
+            anime({
+              targets: document.getElementsByClassName("Coming_Soon_Text")[0],
+              easing: 'linear', 
+              opacity: "1",
+              duration: 100,
+            });
+            var comingSoonState = 0;
+            var typeComingSoon = setInterval(() => {
+              var text = "Coming Soon"
+              comingSoonState+=1
+              if(comingSoonState==text.length)clearInterval(typeComingSoon);
+              $(".Coming_Soon_Text a")[0].textContent = text.slice(0,comingSoonState)
+              
+            }, 100);
+          },1000);
+
+          },2000)
 
           document.getElementsByClassName('cursor_blinking')[0].style.opacity = 0;
           clearInterval(cursorBlinker);
